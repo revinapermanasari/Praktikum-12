@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kurs Rupiah</title>
+  <script src="kurs-rupiah.js">
+  function konversi() {
+    const nilai = document.querySelector("input[name='nilai']").value;
+    const valuta = document.querySelector("select[name='valuta']").value;
+  
+    const kurs = {
+      USD: 9915,
+      SGD: 13472,
+      MYR: 874,
+      JPY: 120,
+      EUR: 15888,
+      SAR: 3592,
+    };
+  
+    const nilai_rupiah = nilai * kurs[valuta];
+  
+    document.querySelector("input[name='nilai_rupiah']").value = nilai_rupiah;
+  }
+  
+  document.querySelector("form").addEventListener("submit", konversi);
+</script>
+</head>
+<body>
+  <h1>Kurs Rupiah</h1>
+  <form action="" method="post">
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" name="nilai" placeholder="Nilai">
+      <select class="form-select" name="valuta">
+        <option value="USD">USD</option>
+        <option value="SGD">SGD</option>
+        <option value="MYR">MYR</option>
+        <option value="JPY">JPY</option>
+        <option value="EUR">EUR</option>
+        <option value="SAR">SAR</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3">
+      <label for="nilai_rupiah">Nilai Rupiah</label>
+      <input type="text" class="form-control" name="nilai_rupiah" readonly>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Konversi</button>
+  </form>
+</body>
+</html>

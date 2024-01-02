@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webjs03</title>
+    <script>
+        let buahs = ["apel", "jeruk", "mangga", "pisang"];
+        buahs[buahs.length]="durian";
+        console.log("jumlah buah adalah " + nuahs.length);
+        for (let i = 0; i < buahs.length; i++){
+            console.log("buah index ke " + i + "adalah " +buahs[i]);
+            document.write("buah index ke " + "adalah " +buahs[i] + "<br>");
+        }
+
+        function isiSelecJus(){
+            let jus = document.getElementById("jus");
+            for (let i = 0; i < buahs.length; i++){
+                let option = document.createElement("option");
+                option.text = buahs[i];
+                jus.add(option);
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <h3>Pilihan Jus</h3>
+</body>
+</html>
